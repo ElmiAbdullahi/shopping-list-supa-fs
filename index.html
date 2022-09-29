@@ -42,8 +42,12 @@
             <section>
                 <form id="item-form">
                     <label>
+                        Quantity:
+                        <input type="number" name="quantity" required min="0" />
+                    </label>
+                    <label>
                         Item:
-                        <input name="item" />
+                        <input name="item" required />
                     </label>
                     <button>Add item</button>
                 </form>

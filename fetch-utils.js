@@ -31,3 +31,9 @@ export async function signOutUser() {
 export async function createItem(item) {
     return await client.from('lists').insert(item).single();
 }
+export async function getItems() {
+    return await client.from('lists').select('*').order('created_at');
+}
+// export async function completeItems() {
+//     return await client.from('lists').update({ complete: true }).eq('id', id).single();
+// }
